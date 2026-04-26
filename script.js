@@ -1,27 +1,71 @@
-// Select elements
-let div = document.querySelector("div");
-let h1 = document.querySelector("h1");
+// 1. Basic function
 
-// Modify heading
-h1.innerText = "Alisa Karimiboroujeni";
-h1.style.textAlign = "center";
-h1.style.fontWeight = "400";
+// Write a function that takes two numbers and returns their sum.
+function test(a, b) {
+    console.log(a + b);
+}
+test(10, 22)
 
-// Create image
-let img = document.createElement("img");
+// 2. Even or odd
 
-// Set image source
-img.setAttribute("src", "https://images.pexels.com/photos/15617836/pexels-photo-15617836.jpeg");
+// Write a function that checks if a number is even or odd.
+function oddeven(num) {
+    if (num % 2 == 0) {
+        console.log(`${num} is even`)
+    }
+    else {
+        console.log(`${num} is odd`)
+    }
+}
+oddeven(13)
 
-// Style image
-img.style.width = "300px";
-img.style.height = "200px";
-img.style.objectFit = "cover";
+// 3. Find maximum
 
-// Add image inside div (top)
-div.append(img);
+// Create a function that takes 3 numbers and returns the largest one.
+function lar(a, b, c) {
+    if (a > b && a > c) {
+        console.log(a);
+    }
+    else if (b > a && b > c) {
+        console.log(b);
+    }
+    else {
+        console.log(c)
+    }
+}
+lar(12, 3, 54)
+// 4. Reverse a string
 
-let p = document.createElement("p");
-p.innerText = "Alisa Karimiboroujeni is a passionate web developer focused on creating clean, user-friendly digital experiences. He enjoys learning new technologies and continuously improving his skills."
-p.style.margin = "20px"
-div.append(p)
+// Write a function that takes a string and returns it reversed.
+// Example: "hello" → "olleh"
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("hello"));
+// 5. Count vowels
+
+// Write a function that counts how many vowels are in a string.
+
+// 6. Factorial
+
+// Write a function to calculate the factorial of a number.
+// Example: 5 → 120
+
+// 7. Palindrome check
+
+// Write a function that checks if a string is a palindrome.
+// Example: "madam" → true
+
+// 8. Array sum
+
+// Write a function that takes an array of numbers and returns the sum.
+
+// 9. Remove duplicates
+
+// Write a function that removes duplicate values from an array.
+// Example: [1,2,2,3] → [1,2,3]
+
+// 10. Callback function (important)
+
+// Write a function that takes another function as an argument and executes it.
