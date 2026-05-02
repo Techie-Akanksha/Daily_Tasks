@@ -43,24 +43,77 @@ function reverseString(str) {
 }
 
 console.log(reverseString("hello"));
+
+function reverse(str) {
+    console.log(str.split('').reverse().join(''))
+}
+reverse("hello")
 // 5. Count vowels
 
 // Write a function that counts how many vowels are in a string.
 
+function countVowel(str) {
+    const vowels = "aeiouAEIOU";
+    let vowel_count = 0;
+    for (const char of str) {
+        if (vowels.includes(char)) {
+            vowel_count++;
+        }
+    }
+    console.log(vowel_count);
+}
+countVowel("hello")
+
+// let str = "Akanksha"
+// for (const val of str) {
+//     console.log(val);
+// }
+// 👉  for...of → gives values (characters)
+// 👉  for...in → gives indexes (positions)
+
 // 6. Factorial
 
 // Write a function to calculate the factorial of a number.
-// Example: 5 → 120
+// Example: 5 → 120, 10
+
+// A factorial means:
+// 👉 Multiply the number by all the numbers below it until 1
+function factorialCal(val){
+    let result = 1;
+    for(let i = 1; i <= val; i++){
+        result *= i;
+    }
+    console.log(result)
+}
+factorialCal(5);
+factorialCal(10);
 
 // 7. Palindrome check
 
 // Write a function that checks if a string is a palindrome.
 // Example: "madam" → true
+//  👉 A palindrome is a word that reads the same:
+// forward 👉 "madam"
+// backward 👉 "madam"
+
+function ispalindrome(str){
+    let word = str.split('').reverse().join('');
+    return str=== word;
+}
+console.log(ispalindrome("madam"))
+console.log(ispalindrome("none"))
 
 // 8. Array sum
 
 // Write a function that takes an array of numbers and returns the sum.
-
+function calArray(arr){
+    let sum = 0;
+    for(let i = 1; i < arr.length; i++){
+        sum += arr[i];
+    }
+    return sum;
+}
+console.log(calArray([1,2,3,4,5]))
 // 9. Remove duplicates
 
 // Write a function that removes duplicate values from an array.
