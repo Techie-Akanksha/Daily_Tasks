@@ -132,3 +132,5 @@ function outer(fun){
 outer(function inner(){
     console.log("Inner Argument Function")
 })
+
+// All 10 Questions based on Functions Completed
