@@ -118,7 +118,17 @@ console.log(calArray([1,2,3,4,5]))
 
 // Write a function that removes duplicate values from an array.
 // Example: [1,2,2,3] → [1,2,3]
+function popDuplicates(params) {
+    return [...new Set(params)]
+}
+console.log(popDuplicates([1,2,2,3]))
 
 // 10. Callback function (important)
 
 // Write a function that takes another function as an argument and executes it.
+function outer(fun){
+    return fun();
+}
+outer(function inner(){
+    console.log("Inner Argument Function")
+})
