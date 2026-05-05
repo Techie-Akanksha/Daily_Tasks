@@ -2,9 +2,9 @@
 
 // Write a function that takes two numbers and returns their sum.
 function test(a, b) {
-    console.log(a + b);
+    return a + b;
 }
-test(10, 22)
+console.log(test(10, 22))
 
 // 2. Even or odd
 
@@ -78,9 +78,9 @@ countVowel("hello")
 
 // A factorial means:
 // 👉 Multiply the number by all the numbers below it until 1
-function factorialCal(val){
+function factorialCal(val) {
     let result = 1;
-    for(let i = 1; i <= val; i++){
+    for (let i = 1; i <= val; i++) {
         result *= i;
     }
     console.log(result)
@@ -96,9 +96,9 @@ factorialCal(10);
 // forward 👉 "madam"
 // backward 👉 "madam"
 
-function ispalindrome(str){
+function ispalindrome(str) {
     let word = str.split('').reverse().join('');
-    return str=== word;
+    return str === word;
 }
 console.log(ispalindrome("madam"))
 console.log(ispalindrome("none"))
@@ -106,14 +106,14 @@ console.log(ispalindrome("none"))
 // 8. Array sum
 
 // Write a function that takes an array of numbers and returns the sum.
-function calArray(arr){
+function calArray(arr) {
     let sum = 0;
-    for(let i = 1; i < arr.length; i++){
+    for (let i = 1; i < arr.length; i++) {
         sum += arr[i];
     }
     return sum;
 }
-console.log(calArray([1,2,3,4,5]))
+console.log(calArray([1, 2, 3, 4, 5]))
 // 9. Remove duplicates
 
 // Write a function that removes duplicate values from an array.
@@ -121,16 +121,44 @@ console.log(calArray([1,2,3,4,5]))
 function popDuplicates(params) {
     return [...new Set(params)]
 }
-console.log(popDuplicates([1,2,2,3]))
+console.log(popDuplicates([1, 2, 2, 3]))
 
 // 10. Callback function (important)
 
 // Write a function that takes another function as an argument and executes it.
-function outer(fun){
+function outer(fun) {
     return fun();
 }
-outer(function inner(){
+outer(function inner() {
     console.log("Inner Argument Function")
 })
 
-// All 10 Questions based on Functions Completed
+// 11. Takes a number and returns its square and 
+// Takes a number and returns its cube
+
+function numSquare(val) {
+    return val * val;
+}
+function numCube(val) {
+    return val * val * val;
+}
+console.log(numSquare(12));
+console.log(numCube(5));
+
+// 12 Takes a number and checks if it is positive, negative, or zero
+function checkNum(val) {
+    if (val > 0) return console.log(`${val} is positive`);
+    if (val < 0) return console.log(`${val} is negative`);
+    else return console.log(val);
+}
+checkNum(-12)
+
+// 13 Write a function that: Swaps two numbers (without using a third variable)
+
+function swap(a, b) {
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    return [a, b]
+}
+console.log(swap(5, 15));
